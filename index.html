@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <!-- 
+        Auther "Marwan Ahmed"
+        Orgnaztion "Code For Iraq"
+        Manage Heba "sattar".
+        
+        This application does not save work, it is intended for study
+        
+        https://github.com/marwan-ahmed/Average-task.git    -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Average-task | Marwan Ahmed</title>
+    
+</head>
+
+<body>
+    <style>
+        body {
+            width: 500px;
+            padding: 5% 0 0;
+            margin: auto;
+            background-attachment: fixed;
+            background-image: url("img/bg.jpeg");
+            background-color:#C5EFF7;
+            background-size: cover;
+            
+        }
+        .boxSite{
+            width: 500px;
+            padding: 5% 0 0;
+            margin: auto;
+            background-attachment: fixed;
+            background-size: cover;
+            /* background-color:fuchsia; */
+        }   
+        .result{
+            width:64px;
+            background-color: #81CFE0 ;
+            
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(53, 52, 52);
+            color: white;
+            text-align: center;
+        }
+        #add{
+            color: #fff;
+        }
+        table{
+            background-color:#8E44AD;
+            color: #fff;
+            width: 280px;
+
+        }
+        span{
+            border:  1px solid #000;
+            margin: 3px;
+            padding: 3px;
+            background-color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+<table id="table" border="1">
+    <tr>
+        <th>الاسم الاول</th>
+        <th>الاسم الثاني</th>
+        <th>الدرجة</th>
+    </tr>
+    <tr>
+        <td>Heba</td>
+        <td>Sattar</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>marwan</td>
+        <td>ahmed</td>
+        <td>95</td>
+    </tr>
+    <tr>
+        <td>husain</td>
+        <td>alowsh</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>hala</td>
+        <td>hazem</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>husain</td>
+        <td>abbas</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>tahseen</td>
+        <td>alaa</td>
+        <td>85</td>
+    </tr>
+    <tr>
+        <td>bilal</td>
+        <td>spaky</td>
+        <td>1</td>
+    </tr>
+</table><hr/>
+
+<span id="resUlt"></span>
+    
+    <div class="footer">
+        <p>Marwan Ahmed | Abu Alror</p>
+    </div>
+    <script>
+        
+                    var table = document.getElementById("table"), avgVal, sumVal = 0,
+                            rowCount = table.rows.length - 1;// minus the header
+
+                        for (var i = 1; i < table.rows.length; i++) {
+                            sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+                        }
+
+                        document.getElementById("resUlt").innerHTML = "معدل الدرجات = " + parseInt(sumVal / rowCount);
+    </script>
+    
+               
+</html>
